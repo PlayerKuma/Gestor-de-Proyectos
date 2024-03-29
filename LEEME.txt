@@ -1,0 +1,9 @@
+Software desarrollado en Laravel 10.*
+Equipo:
+401:	Marlon Rodríguez Yañez
+	Luis Michel Gardón Pantoja
+	Melissa Maura Salgado
+	Alberto Alejandro Novo Acuña
+
+404:	Claudia Beatriz Viera Hernández
+Tiene login y registro y un CRUD completo de Gestión de Tareas. Se maneja el tema de los permisos y rutas protegidas con el uso de los token csrf para parametros sensibles.
