@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\task;
+use App\Models\Project;
 use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\View\View;
@@ -17,13 +18,19 @@ class TaskController extends Controller
         $tasks = Task::latest()->paginate(3);
         return view('index', ['tasks'=>$tasks]);
     }
+    public function uIndex(): View
+    {
+        $tasks = Task::latest()->paginate(3);
+        return view('uTasks', ['tasks'=>$tasks]);
+    }
 
     /**
      * Show the form for creating a new resource.
      */
     public function create(): View
     {
-        return view('create');
+        $projects = Project::all();
+        return view('create',['projects'=>$projects]);
     }
 
     /**
@@ -34,6 +41,7 @@ class TaskController extends Controller
         $request->validate([
             'title' => 'required',
             'description' => 'required',
+            'project' => 'required',
 
         ]);
 

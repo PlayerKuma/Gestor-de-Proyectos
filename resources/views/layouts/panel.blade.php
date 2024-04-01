@@ -19,31 +19,17 @@
   <link href="{{asset('css/argon-dashboard.css?v=1.1.2')}}" rel="stylesheet" />
 </head>
 
-<body class="">
-  <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light bg-white" id="sidenav-main">
-    <div class="container-fluid">
-      <!-- Toggler -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <!-- Brand -->
-      <a class="navbar-brand pt-0" href="/">
-        Gestor de Tareas
-      </a>
+<body class="bg-dark">
 
-      <!-- Collapse -->
-      <div class="collapse navbar-collapse" id="sidenav-collapse-main">
-
-
-      </div>
-    </div>
-  </nav>
   <div class="main-content">
     <!-- Navbar -->
     <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
       <div class="container-fluid">
         <!-- Brand -->
-        <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="{{route('home')}}">Dashboard</a>
+        <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="{{route('home')}}">Gestor de Tareas (Administración)         |          </a>
+        <div class="media-body ml-2 d-none d-lg-block">
+            <span style="color: white" class="mb-0 text-sm  font-weight-bold">{{Auth::user()->name}}</span>
+          </div>
         <form action="{{ route('logout') }}" method="post">
             @csrf
             <button type="submit" class="btn btn-danger">Cerrar sesión</button>
@@ -70,10 +56,10 @@
             <div class="col-xl-6">
               <ul class="nav nav-footer justify-content-center justify-content-xl-end">
                 <li class="nav-item">
-                  <a href="/" class="nav-link">{{config('app.name')}}</a>
+                  <a style="color: rgb(200, 0, 255)" href="/" class="nav-link">Menu de Laravel</a>
                 </li>
                 <li class="nav-item">
-                  <a href="www.uci.cu" class="nav-link" target="_blank">Acerca de</a>
+                  <a style="color: rgb(200, 0, 255)" href="www.uci.cu" class="nav-link" target="_blank">Acerca de</a>
                 </li>
 
               </ul>

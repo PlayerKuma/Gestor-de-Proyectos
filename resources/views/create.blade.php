@@ -55,6 +55,15 @@
                         <option value="Completada">Completada</option>
                     </select>
                 </div>
+                <div class="form-group">
+                    <strong style="color: white;">Proyecto:</strong>
+                    <select name="project" class="form-select" id="">
+                        <option value="">-- Elige el proyecto --</option>
+                        @foreach ($projects as $project)
+                        <option value="{{ $project->name }}">{{ $project->name }}</option>
+                    @endforeach
+                    </select>
+                </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center mt-2">
                 <button type="submit" class="btn btn-primary">Crear</button>

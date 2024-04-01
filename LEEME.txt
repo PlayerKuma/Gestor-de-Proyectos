@@ -4,6 +4,7 @@ Equipo:
 	Luis Michel Gardón Pantoja
 	Melissa Maura Salgado
 	Alberto Alejandro Novo Acuña
+	Senén Abascal Padilla
 
 404:	Claudia Beatriz Viera Hernández
 Tiene login y registro y un CRUD completo de Gestión de Tareas. Se maneja el tema de los permisos y rutas protegidas con el uso de los token csrf para parametros sensibles.
